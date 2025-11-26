@@ -1,6 +1,8 @@
 # Operating System files
 .DS_Store
 Thumbs.db
+#dont add the hello world webpages
+hello-world.html
 
 # Editor-specific files
 .vscode/
