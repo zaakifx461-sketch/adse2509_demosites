@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2509 Demosite -page layout</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- embeded stylesheet to demonstrate css flexbox and grid layout -->
+     <style>
+        /* css to style the flexbox */
+        .flex-container{
+
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+
+        }
+        .flex-items{
+            margin: 5px;
+        }
+      /*   common rules for the flex and grid items  */
+      .flex-items, .grid-items {
+        background-color: #444;
+        text-align: center;
+        padding: 10px;
+      }
+      /* code for grid layout */
+      .grid-container{
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid: gap 10px;
+        padding: 20px;
+      }
+      @media (max-width: 767px){
+        .flex-items {flex: 1 0 90%;}
+        .grid-container {grid-template-columns: 1fr;}
+      }
+      @media (min-width: 768px)
+      {
+        .flex-container{justify-content: space-between;}
+         .flex-items {flex: 1 0 25%; border-radius: 7px;}
+         .grid-container{grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(100px,auto);}
+         .grid-items:nth-child(1){grid-row:span 3;}
+           .grid-items:nth-child(5){grid-row:span 2;}
+             .grid-items:nth-child(6){grid-column:2/-1;}
+      }
+     </style>
+</head>
+<body>
+     <nav id="main-nav">
+    <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    <ul id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="pages/textformating.html"> Text formating</a>
+        </li>
+        <li>
+            <a href="list.html">lists</a>
+        </li>
+        <li>
+            <a href="link.html">links</a>
+        </li>
+        <li>
+            <a href="images.html">Images</a>
+        </li>
+        <li><a href="pages/css_pages/transitions.html"></a> transitions</li>
+        <li><a href="pages/css_pages/transformation.html"></a>transformation</li>
+        <li><a href="pages/css_pages/animations.html"></a>animations</li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+    <div id="container">
+        <!-- links to our media handle -->
+         <h2 class="social heading">follow us on social media</h2>
+         <div class="social-icons mt-4">
+            <a href="#" target="_blank" title="">linkedin</a>
+            <a href="#" target="_blank" title="follow us on ">instagram</a>
+            <a href="#" target="_blank" title="follow us on ">tiktok</a>
+            <a href="#" target="_blank" title="follow us onfacebook "> facebook</a>
+            <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
+ 
+         </div>
+    <h1 class="page-heading"> <span class="page-heading-underline"></span>Css flex box and Grid Layout</h1>
+    <p>The flexbox layout usually reffered to as flexbox is a one-dimensional layout for distributing space between items and includes numerous aligment capabilities. An example of a flexbox layout is given below</p>
+    <h2 class="section-heading">flexbox layout</h2>
+    <div class="flex-container">
+        <div class="flex-items">item1</div>
+        <div class="flex-items">item2</div>
+        <div class="flex-items">item3</div>
+        <div class="flex-items">item4</div>
+        <div class="flex-items">item5</div>
+    </div>
+    <h2 class="section-heading">Grid layout</h2>
+    <p>A grid is a set of intersecting horizontal and vertical lines definining rows and columns , that introduces a two-dimensional grid system to CSS. elements can be placed withn these rows and column lines. An example </p> <div class="grid-container">
+        <div class="grid-items">item1</div>
+        <div class="grid-items">item2</div>
+        <div class="grid-items">item3</div>
+        <div class="grid-items">item4</div>
+        <div class="grid-items">item5</div>
+    </div>
+
+    <footer class="page-footer">
+  ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
+  designed by <a href="#" target="_blank">Zaaki Tech Company</a>
+</footer>
+
+<script>
+  document.getElementById("currYear").textContent = new Date().getFullYear();
+</script>
+
+    
+</body>
+</html>

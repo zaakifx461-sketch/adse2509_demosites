@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2509 Demosite -CSS ttran</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <!--internal style sheet that wil be used to illustrate CSS transformation-->
+<style>
+    #transformation{
+        width: 150px;
+        height: 150px;
+        background-color: #f00;
+
+       /*  transform: background 2s ease-out , width 2s ease-out, height 2s ease-out; */
+    }
+    #transformation:hover{
+
+    
+        background-color: #f80;
+        transform: matrix(.5,-.125,.028,.5,0,0)
+    }
+    .btn{
+        background-color: blue;
+        color: #f80;
+       /*  transformation: all is ease-out; */
+    } 
+    .btn:hover{
+        background-color: black;
+        color: purple;
+        transform: rotate3d(3,1,4,45deg);
+    }
+</style>
+</head>
+<body>
+     <nav id="main-nav">
+    <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    <ul id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="pages/textformating.html"> Text formating</a>
+        </li>
+        <li>
+            <a href="list.html">lists</a>
+        </li>
+        <li>
+            <a href="link.html">links</a>
+        </li>
+        <li>
+            <a href="images.html">Images</a>
+        </li>
+    </ul>
+    </nav>
+    <div id="container">
+        <!-- links to our media handle -->
+         <h2 class="social heading">follow us on social media</h2>
+         <div class="social-icons mt-4">
+            <a href="#" target="_blank" title="">linkedin</a>
+            <a href="#" target="_blank" title="follow us on ">instagram</a>
+            <a href="#" target="_blank" title="follow us on ">tiktok</a>
+            <a href="#" target="_blank" title="follow us onfacebook "> facebook</a>
+            <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
+ 
+         </div>
+    <h1 class="page-heading"> <span class="page-heading-underline"></span>CSS transformation</h1>
+    <p>A Css transition is way o fproviding a smooth change to a given css property over a given set of diration <br>kindly hover your mouse over the red square or butons below to see how CSS transition work</p>
+    <div id="transformation"></div>
+    <label for="button">button1</label>
+    <input type="button" class="btn" value="button1">&nbsp;
+     <label for="button">button2</label>
+    <input type="button" class="btn" value="button2">&nbsp;
+    <footer class="page-footer">
+  ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
+  designed by <a href="#" target="_blank">Zaaki Tech Company</a>
+</footer>
+
+<script>
+  document.getElementById("currYear").textContent = new Date().getFullYear();
+</script>
+
+    
+</body>
+</html>

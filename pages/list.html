@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <link rel="stylesheet" href="../css/main.css">
+<title>ADSE2509 Demosite - HTML Lists</title>
+</head>
+<body>
+  <nav id="main-nav">
+    <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    <ul id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="pages/textformating.html"> Text formating</a>
+        </li>
+        <li>
+            <a href="list.html">lists</a>
+        </li>
+        <li>
+            <a href="link.html">links</a>
+        </li>
+        <li>
+            <a href="images.html">Images</a>
+        </li>
+        <li><a href="css_pages/transitions.html"></a> transitions</li>
+        <li><a href="css_pages/transformation.html"></a>transformation</li>
+        <li><a href="css_pages/animations.html"></a>animations</li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+    <div id="container">
+        <!-- links to our media handle -->
+         <h1>follow us on social media</h1>
+         <div class="social-icons mt-4">
+            <a href="#" target="_blank" title="">linkedin</a>
+            <a href="#" target="_blank" title="follow us on ">instagram</a>
+            <a href="#" target="_blank" title="follow us on ">tiktok</a>
+            <a href="#" target="_blank" title="follow us onfacebook "> facebook</a>
+            <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
+ 
+         </div>
+    <h1 class="page-heading">HTML Lists </h1>
+<p>An HTML list is a collection of related items e.g., days of the week or ingredients in arecipe. This page will illustrate types of lists we can create in a webpage.</p>
+Lists Content
+<h2> Ordered Lists</h2>
+ 
+<p>This is a collection of items in a particular order or steps that need to be followed or carried out in a given order. Some examples are given below.</p>
+ <ol>
+Days in a Week:
+<li>Sunday</li>
+<li>Monday</li>
+  <li>Tuesday</li>
+    <li>Wednesday</li>
+      <li>Thursday</li>
+        <li>7.Saturday</li> </ol>
+ 
+<h3>Unordered Lists</h3>
+ 
+<p>This is a collection of items in no specific order or preference, though the items are related. An example is a list of ingredients to make KFC Chicken.</p>
+ 
+<h3>KFC Chicken Recipe:</h3>
+<h4>Ingredients</h4>
+<ul>
+<li>Unseasoned chicken (whatever you fancy)</li>
+<li>Self raising flour</li>
+<li>For the seasoning 5 cups of plain flour</li>
+<li>1/2 tbsp oregano</li>
+<li>1/2 tbsp thyme</li>
+<li>1 tbsp ginger</li>
+<li>1 tbsp mustard powder</li>
+<li>1 tbsp celery salt</li>
+<li>1 tbsp black pepper</li>
+<li>1/3 tbsp sea salt </li>
+<li>1 tbsp white pepper</li>
+<li>For the egg wash 1 egg</li>
+<li>Dash of milk</li>
+</ul>
+ 
+<h3>Definition List</h3>
+ 
+<h4>Types of Nouns</h4>
+<dl>
+  <dt>Common Noun:</dt>
+  It is a name of an object in general, such as pencil, pen, paper, and so on.Proper </dd>
+  <dt> Noun:</dt>
+  <dd> It is the unique name of a person or a place.</dd>
+</dl>
+ 
+<h3>Nested Lists</h3
+ <p>
+  This is a list that contains other list(s) within it. It can contain either an ordered or
+  unordered lists or both. An example of this is the list of courses, modules and the respective semester they are offered at Edulink International College :
+</p>
+ 
+<ol>
+<li>ACCP/ADSE
+  <ol type="i" >
+<li>Semester 1 <ol type="a">
+<li>Programming Practices &amp; Techniques</li>
+<li>Elementary Programming In C</li>
+<li>Building Modernistic Website</li>
+<li>UI &amp; UX for RWD</li>
+<li>Front End Development using React</li>
+<li>Data Management using SQL server 2022</li>
+</ol>
+</li>
+<li>Semester 2 <ol type="b">
+  <li>Data Processing with XML and JSON</li>
+    <li>OOP Concepts</li>
+      <li>Java Fundamentals</li>
+<li>Java Professional</li>
+  <li>Building Apps Using C#</li>
+    <li>Emerging Job Areas (SMAC)</li>
+</ol>
+ 
+ 
+<ol>
+<li>
+<li>ARENA/Multimedia <ol type="i">
+<li>Semester 1 <ol type="c">
+<li>Digital imaging</li>
+<li>Working with vectors</li>
+</ol>
+<li>Semester 2 <ol type="d">
+<li>Video editing</li>
+<li>Sound editing</li>
+<li>Colour Theory</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</ol>
+<footer class="page-footer">
+  ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
+  designed by <a href="#" target="_blank">Zaaki Tech Company</a>
+</footer>
+
+<script>
+  document.getElementById("currYear").textContent = new Date().getFullYear();
+</script>
+
+</div>
+</body>
+</html>

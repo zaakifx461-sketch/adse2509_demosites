@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2509 Demosite -tables</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <nav id="main-nav">
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    <ul id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="textformating.html"> Text formating</a>
+        </li>
+        <li>
+            <a href="list.html">lists</a>
+        </li>
+        <li>
+            <a href="link.html">links</a>
+        </li>
+        <li><a href="images.html">images</a></li>
+        <li><a href="#">CSS</a>
+        <ul>
+        <li><a href="css_pages/transitions.html"></a> transitions</li>
+        <li><a href="css_pages/transformation.html"></a>transformation</li>
+        <li><a href="css_pages/animations.html"></a>animations</li>
+        </ul>
+        </li>
+         <li><a href="tables.html">tables</a></li>
+        <li><a href="forms.html">forms</a></li>
+        <li><a href="multimedia.html">multimedia</a></li>
+    </ul>
+    </nav>
+    <div id="container">
+        <!-- links to our media handle -->
+         <h2 class="social heading">follow us on social media</h2>
+         <div class="social-icons mt-4">
+            <a href="#" target="_blank" title="">linkedin</a>
+            <a href="#" target="_blank" title="follow us on ">instagram</a>
+            <a href="#" target="_blank" title="follow us on ">tiktok</a>
+            <a href="#" target="_blank" title="follow us onfacebook "> facebook</a>
+            <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
+ 
+         </div>
+    <h1 class="page-heading"> <span class="page-heading-underline"></span>This is tables</h1>
+    <p>A table is grid of rows and columns. Rows span from left to right ,while column span form top to bottom . An intersection between a row and a columns is called a cell. <br>Examples of a tables are given below</p>
+    <table border="1" class="data-table" summary="table displaying the details of the ADSE2509 intake">
+        <caption>ADSE2509 students</caption>
+        <thead>
+            
+                <td>student No</td>
+                <td>Names</td>
+                <td>Location</td>
+        
+        </thead>
+        <tbody>
+            <tr>
+                <td>s001</td>
+                <td>Pascal kivutu</td>
+                <td>Machakos</td>
+            </tr>
+            <tr>
+                <td>s002</td>
+                <td>abdirahman</td>
+                <td>ngara</td>
+            </tr>
+            <tr>
+                <td>s003</td>
+                <td>justin/td>
+                <td>Machakos</td>
+            </tr>
+            <tr>
+                <td>s004</td>
+                <td>kivutu</td>
+                <td>Nandi</td>
+            </tr>
+            <tr>
+                <td>s005</td>
+                <td>Yahya mohamud</td>
+                <td>kericho</td>
+            </tr>
+            <tr>
+                <td>s006</td>
+                <td>mohamud</td>
+                <td>Kwale</td>
+            </tr>
+            <tr>
+                <td>s007</td>
+                <td>Abdikarim abdirahman</td>
+                <td>Naivasha</td>
+            </tr>
+            <tr>
+                <td>s008</td>
+                <td>Yussuf ares</td>
+                <td>Machakos</td>
+            </tr>
+            <tr>
+                <td>s009</td>
+                <td>kevin kdb</td>
+                <td>Momabasa</td>
+            </tr>
+            <tr>
+                <td>s010</td>
+                <td>Mahat Ali</td>
+                <td>Garissa</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>The table below demonstrates how to merge columsn</p>
+    <table border="1" class="data-table">
+<tr>
+    <th colspan="4">Departments &amp; their employees</th>
+</tr>
+<tr>
+    <th colspan="2">IT</th>
+    <th colspan="2">Accounts</th>
+</tr>
+<tr>
+    <th>Name</th>
+    <th>location</th>
+    <th>Name</th>
+    <th>location</th>
+</tr>
+<tr>
+    <td>David</td>
+    <td>Newtork</td>
+    <td>Johm</td>
+    <td>London</td>
+</tr>
+<tr>
+    <td>Kathy</td>
+    <td>new Jersey</td>
+    <td>yssuf</td>
+    <td>USA</td>
+</tr>
+
+    </table>
+    <p>The table below illustrates how to merge both rows and columns</p>
+    
+    <table border="1" class="data-table">
+        <caption>Preffered Holiday Destination by Various Age groups</caption>
+        <tr>
+<td colspan="2" rowspan="2">Results</td>
+<td colspan="3">Range</td>
+</tr>
+<tr>
+<td>18 to 20</td>
+<td>25 to 50</td>
+<td>over 50</td>
+</tr>
+<tr>
+<td rowspan="3">Your favorite vacation destination</td>
+<td>Dubai</td>
+<td>25%</td>
+<td>50%</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Bangkok</td>
+<td>40%</td>
+<td>30%</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Switzerland</td>
+<td>30%</td>
+<td>20%</td>
+<td>50%</td>
+</tr>
+    </table>
+    <footer class="page-footer">
+  ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
+  designed by <a href="#" target="_blank">Zaaki Tech Company</a>
+</footer>
+
+<script>
+  document.getElementById("currYear").textContent = new Date().getFullYear();
+</script>
+
+    
+</body>
+</html>

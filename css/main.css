@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+
+/* CSS document containing site-wide rules */
+/*impoer the lobster font from the google fonts api to use in our site*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/*imported fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Gravitas+One&family=Lobster&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* =========================
+   NAVIGATION – MOBILE FIRST
+   ========================= */
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 10000;
+  padding: 10px;
+}
+
+/* Hamburger button */
+#menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hamburger lines */
+.hamburger-line {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger animation */
+#menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile menu */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.92);
+}
+
+#nav-menu.active {
+  display: flex;
+}
+
+#nav-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#nav-menu a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#nav-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Submenu (mobile) */
+#nav-menu > li > ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+#nav-menu > li:focus-within > ul {
+  display: block;
+}
+/*stlye the forms input field/controls e.g textfields passwords,tel,email*/
+  form textarea, input[type="text"] ,input[type="password"],input[type="tel"], input[type="email"],form select{
+    width: 95%;
+  }
+
+
+/* =========================
+   DESKTOP NAVIGATION
+   ========================= */
+@media (min-width: 768px) {
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #main-nav {
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  #nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    background: transparent;
+  }
+
+  #nav-menu li {
+    position: relative;
+    border: none;
+  }
+
+  #nav-menu > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 200px;
+    background: rgba(0,0,0,0.92);
+  }
+
+  #nav-menu > li:hover > ul {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: deeppink;
+    }
+}
+@media (min-width: 768px){
+
+    body{ background-image: url(../images/beachview.png);}
+}
+
+
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    font-size: 17px;
+    text-align: justify;
+    background-color: deeppink;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main container */
+#container {
+    margin: 2% auto;
+    padding: 10px 1%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+/* Page heading */
+.page-heading {
+    color: #f00;
+    font-weight: 800;
+    font-size: 2.2em;
+    text-align: center;
+    font-family: saira;
+}
+
+/* Heading underline */
+.page-heading-underline {
+    display: block;
+    width: 120px;
+    height: 4px;
+    background-color: #0beaf5;
+    margin: 10px auto;
+}
+
+/* Footer */
+.page-footer {
+    color: #0beaf5;
+    text-align: center;
+    margin: 10px 0;
+    font-family: "lobster";
+    font-size: 2em;
+}
+.section-heading {
+   font-family: 'JetBrains Mono';
+    src: url('JetBrainsMono-BoldItalic.woff2') format('woff2'),
+        url('JetBrainsMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+ .gallery{
+
+     font-family: 'JetBrains Mono NL';
+    src: url('JetBrainsMonoNL-Medium.woff2') format('woff2'),
+        url('JetBrainsMonoNL-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+ /*-----------------------------------------
+Image gallery - responsive grid
+ -----------------------------------------
+-----------------------------------------*/
+.gallery{
+    display: grid;
+    gap: .5rem;
+    margin-bottom: .2rem;
+    grid-template-columns: 1fr;
+
+}
+/*tablet device override*/
+@media (min-width:768px) and (max-width: 1023px)
+{
+
+    .gallery{grid-template-columns: repeat(2,1fr);}
+}
+
+/*desktop device override*/
+@media (min-width:1024px) and (max-width: 11439px)
+{
+
+    .gallery{grid-template-columns: repeat(3,1fr);}
+}
+
+/*device with above 1440px override*/
+@media (min-width:1440x) 
+{
+
+    .gallery{grid-template-columns: repeat(4,1fr);}
+}
+/*card style*/
+.gallery .item{
+
+    background: #fff;
+    border-radius: .2rem;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    display: grid;
+    grid-template-rows: auto auto ;
+
+
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px groove #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gallery figcaption {
+    padding: .75rem;
+    font-size: .2em;
+    display: flex;
+    flex-direction: column;
+    gap: 25rem;
+    color: #000;
+}
+/*style the price text*/
+.gallery .price{
+  .gallery .price{color: #2a9d8f;}
+  .price::before{ content: 'Kes.  ';}
+  .price::after {content: '/=';}
+}
+    
+/*style the table in our site*/
+
+.data-table{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: inherit;
+}
+
+/*style the tables odd and even rows differently*/
+.data-table tr:nth-child(odd) {background-color: #4075a8;}
+.data-table tr:nth-child(even){
+    background-color: #0d55ff;
+}
+/*style the heading row differently */
+.data-table tr:first-child{
+  background-color: #0beaf5;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+
+/*Style the fomrs in Our site*/
+form{
+  font-size: 17px;
+  font-weight: 600;
+  color: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*stlye the form fieldset*/
+form fieldset{
+  background-color:#000 ;
+  border: 2px groove #0d55ff;
+  border-radius: 15px;
+  margin-bottom: 7px;
+}
+/*stlye the forms required fielset*/
+.required-field{
+  color: #f00;
+  font-weight: 900;
+  font-size: 2em;}S
+
+  /*stlye the forms labels*/
+  form label{
+    margin-top: 4px;
+    text-align: left;
+    display: inline;
+
+  }
+  /*stlye the forms input field/controls e.g textfields passwords,tel,email*/
+  form textarea, input[type="text"] ,input[type="password"],input[type="tel"], input[type="email"],form select{
+    line-height: 30px;
+    border-radius: 5px;
+    color:#000
+
+  }
+  form select{
+    padding: 8px;
+  
+  }
+  /*style the buttons*/
+  form input[type="submit"] ,input[type="reset"],input[type="button"], form button{
+    background: linear-gradient(to bottom, #ffaf4b 0%,#ff920a 100%);
+    color: #fff;
+    font-size: 20px;
+    padding: 3px 7px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    border: thin outset rba(231,221,222,.9);
+  }

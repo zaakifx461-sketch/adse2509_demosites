@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2509 Demosite -forms</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <nav id="main-nav">
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    <ul id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="pages/textformating.html"> Text formating</a>
+        </li>
+        <li>
+            <a href="list.html">lists</a>
+        </li>
+        <li>
+            <a href="link.html">links</a>
+        </li>
+        <li>
+            <a href="images.html">Images</a>
+        </li>
+        <li><a href="images.html">images</a></li>
+        <li><a href="#">CSS</a>
+        <ul>
+        <li><a href="css_pages/transitions.html"></a> transitions</li>
+        <li><a href="css_pages/transformation.html"></a>transformation</li>
+        <li><a href="css_pages/animations.html"></a>animations</li>
+        </ul>
+        </li>
+        <li><a href="tables.html">tables</a></li>
+        <li><a href="forms.htmle">forms</a></li>
+        <li><a href="multimedia.html">multimedia</a></li>
+    </ul>
+    </nav>
+    <div id="container">
+        <!-- links to our media handle -->
+         <h2 class="social heading">follow us on social media</h2>
+         <div class="social-icons mt-4">
+            <a href="#" target="_blank" title="">linkedin</a>
+            <a href="#" target="_blank" title="follow us on ">instagram</a>
+            <a href="#" target="_blank" title="follow us on ">tiktok</a>
+            <a href="#" target="_blank" title="follow us onfacebook "> facebook</a>
+            <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
+    
+            </div>
+        <h1 class="page-heading"> <span class="page-heading-underline"></span>THESE ARE HTML FORMS😍</h1>
+        <p>An Html form is an interacticve tool used to your webpage that is made up of various cotntrols used to collect data from  your website&rsquo;s visistors/users. the users information is validated by the ,then sent to the server for further processing and/or storage. Examples of commonly used forms are registratiion/sign up forms and login/sing-in fomrs</p>
+        <p>An example of registratiion forms/signup form is given below The form will be used to collect the details of a prospective employee</p>
+        <form method="post" name="frmRegister" id="frmRegister" title="Please enter your details" accept-charset="utf-8">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <p>
+                <label for="txtFirstName">First Name <span class="required-field">*</span>:</label> <br>
+                <input type="text" autofocus form="frmRegister" id="txtFirstName" name="txtFirsName" tabindex="10" placeholder="First Name" title="Please Enter Your first Name" required>
+            </p>
+                <p>
+                    <label for="txtLastName">Last Name <span class="required-field">*</span>:</label> <br>
+                    <input type="text" autofocus form="frmRegister" id="txtLastName" name="txtLastName" tabindex="20" placeholder="Last Name" title="Please Enter Your Last Name" required>
+                </p>
+                <p>
+                    <label for="dtpBirhtdate">Birth Date <span class="required-field">*</span>:</label> <br>
+                    <input type="text" autofocus form="frmRegister" id="dtpBirhtdate" name="dtpBirhtdate" tabindex="30" placeholder="yyyy-mm-d" title="Please Enter Your Birth Date" required>
+                </p>
+                <p>
+                    <label >Gender <span class="required-field">*</span>:</label> <br>
+                    <input type="radio" autofocus form="frmRegister" id="rdoMale" name="Gender" tabindex="40" title="Male gender" required> <label for="rdoMale">Male</label>
+                    <input type="radio" autofocus form="frmRegister" id="rdoFemale" name="Gender" tabindex="50" title="Female gender" required> <label for="rdoFemale">Female</label>
+                </p>
+                 <p>
+                    <label for="txtMaritalStatus">Marital Name:</label> <br>
+                    <input type="text" autofocus form="frmRegister" id="txtMaritalStatus" name="txtMaritalStatus" tabindex="60" placeholder="Marital Status" title="Please select your marital Status" list="dtlMaritalStatus" >
+                    <datalist id="dtlMaritalStatus">
+                        <option value="single">Single</option>
+                        <option value="Engaged">Engaged</option>
+                        <option value="Married">Married</option>
+                        <option value="separated">Separated</option>
+                        <option value="Divorced">Divorce</option>
+                    </datalist>
+                </p>
+        </fieldset>
+        <fieldset>
+            <legend>Account Details</legend>
+            <p>
+                <label for="txtUsername">Username <span class="required-field">*</span>:</label>
+                <input type="text" required form="frmRegister" id="txtUsername"
+                placeholder="Please enter your user name"
+                title="Please enter your user name" name="txtUsername" tabindex="70">
+            </p>
+                <label for="txtpaword">paword <span class="required-field">*</span>:</label>
+                <input type="password" required form="frmRegister" id="txtpaword"
+                placeholder="Please enter your user password"
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^*_]).{8,}$" title="Please enter your password" name="txtpaword" tabindex="80">
+            </p>
+                <label for="txtConfirmpassword">Confirm password: <span class="required-field">*</span></label>
+                <input type="password" required form="frmRegister" id="txtConfirmpassword"
+                placeholder="secret passs"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^*_]).{8,}$"  title="Please confirm your password" name="txtConfirmpassword" tabindex="90">
+            </p>
+            
+        </fieldset>
+        <fieldset>
+            <legend>Conatact Details</legend>
+            <p>
+                <label for="txtPhoneNumber">Phone Number:</label>
+                <input type="text" form="frmRegister" id="txtPhoneNumber"
+                placeholder="+2547--------"
+                title="Please enter your phone Number" name="txtPhoneNumber" tabindex="100">
+            </p>
+            <p>
+                <label for="txtEmail">Email:</label>
+                <input type="email" form="frmRegister" id="txtEmail"
+                placeholder="xxx@gmail.confirm"
+                title="Please enter your Email" name="txtEmail" tabindex="110">
+            </p>
+            <p>
+                <label for="txtPostalAdress">PostalAdress:</label>
+                <input type="text" form="frmRegister" id="txtPostalAdress"
+                placeholder="p.o box"
+                title="Please enter your postal address" name="txtPostalAdress" tabindex="120">
+            </p>
+            <p>
+                <label for="txtCity">City:</label>
+                <input type="text"form="frmRegister" id="txtCity"
+                placeholder="Please enter your city"
+                title="Please enter your city" name="txtCity" tabindex="130">
+            </p>
+            <p>
+                    <label for="sltCountry">Country:</label> <br>
+                    
+                    <select id="sltCountry" form="frmRegister" tabindex="140" title="please select your country">
+                        <option value="Uganda">Uganda</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option selected value="Somalia">Somalia</option>
+                    </select>
+                </p>
+        </fieldset>
+        <fieldset>
+            <legend>Other Details</legend>
+            <p>
+                <label>Hobbies</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="150" value="Movies" id="chkMovies" name="chkMovies">Movies</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="160" value="Upcycling" id="Upcycling" name="Upcycling">Upcycling</label><br>
+                <label><input type="checkbox" form="frmRegister" tabindex="170" value="swimming" id="swimming" name="swimming">swimming</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="180" value="reading" id="reading" name="reading">Reading</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="190" value="football" id="football" name="football">Football</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="200" value="reading" id="reading" name="reading">Reading</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="210" value="travelling" id="travelling" name="travelling">Travelling</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="220" value="cooking" id="cooking" name="cooking">Cooking</label> <br>
+                <label><input type="checkbox" form="frmRegister" tabindex="230" value="Writing" id="Writing" name="Writing">Writing</label> <br>
+            </p>
+            <p>
+<label for="txaSummary">Briefly Describe Yourself</label><br/>
+<textarea name="txaSummary" id="txaSummary" form="frmRegister" placeholder="Professional Summary" tabindex="290" title="Please decribe your Professional summary"></textarea>
+</p>
+<p>
+<label for="fileField">Upload CV &amp; Certificates <span class="required-field">*</span> <br/>Max size (5MB) formats allowed(pdf,doc,docx,odf &amp; txt); </label><br/>
+<input type="file" name="fileField" id="fileField" tabindex="310"/>
+</p>
+<p>
+<input type="submit" name="btnSubmit" id="btnSubmit" tabindex="320" value="Submit"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" name="btnReset" id="btnReset" tabindex="330" value="Reset"/><br/>
+</p>
+
+
+
+        </fieldset>
+    </form>
+    <footer class="page-footer">
+  ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
+  designed by <a href="#" target="_blank">Zaaki Tech Company</a>
+</footer>
+
+<script>
+  document.getElementById("currYear").textContent = new Date().getFullYear();
+</script>
+
+    
+</body>
+</html>
