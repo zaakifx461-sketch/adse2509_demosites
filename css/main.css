@@ -364,3 +364,7 @@ form fieldset{
     border-radius: 7px;
     border: thin outset rba(231,221,222,.9);
   }
+  video{
+    width: 500px;
+    height: 500px;
+  }
