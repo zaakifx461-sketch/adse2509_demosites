@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2509 Simple Calculator</title>
+    <style>
+        /* Added basic CSS for layout */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        fieldset { border: 1px solid #ccc; padding: 20px; border-radius: 5px; max-width: 400px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #result-area { margin-top: 20px; font-size: 1.2em; font-weight: bold; color: #333; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">JavaScript Demos</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <h1 class="page-heading">Simple JavaScript Calculator</h1>
+        <p>This site illustrates the use of arithmetic operators and the switch-case construct.</p>
+
+        <form id="frmCalculator">
+            <fieldset>
+                <legend>Calculator</legend>
+
+                <div class="form-group">
+                    <label for="txtFirstNum">First Number <span class="required-field">*</span></label>
+                    <input type="number" id="txtFirstNum" placeholder="Enter first number">
+                </div>
+
+                <div class="form-group">
+                    <label for="selOperator">Operator <span class="required-field">*</span></label>
+                    <select id="selOperator">
+                        <option value="">-- Select Operator --</option>
+                        <option value="+">Add (+)</option>
+                        <option value="-">Subtract (-)</option>
+                        <option value="*">Multiply (*)</option>
+                        <option value="/">Divide (/)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtSecondNum">Second Number <span class="required-field">*</span></label>
+                    <input type="number" id="txtSecondNum" placeholder="Enter second number">
+                </div>
+
+                <button type="button" onclick="calculateResult()">Calculate</button>
+
+                <div id="result-area">Result: <span id="txtResult">-</span></div>
+            </fieldset>
+        </form>
+
+        <footer class="page-footer">
+            ADSE2509 copyright &copy; <span id="currYear"></span>
+        </footer>
+    </div>
+
+    <script>
+        // 1. Set the Copyright Year automatically
+        document.getElementById("currYear").textContent = new Date().getFullYear();
+
+        // 2. The Calculator Logic
+        function calculateResult() {
+            // Get DOM elements
+            const num1Input = document.getElementById('txtFirstNum').value;
+            const num2Input = document.getElementById('txtSecondNum').value;
+            const operator = document.getElementById('selOperator').value;
+            const resultSpan = document.getElementById('txtResult');
+
+            // Validation: Ensure fields are not empty
+            if (num1Input === '' || num2Input === '' || operator === '') {
+                resultSpan.textContent = "Please fill in all fields.";
+                resultSpan.style.color = "red";
+                return;
+            }
+
+            // Convert string inputs to Numbers
+            const num1 = parseFloat(num1Input);
+            const num2 = parseFloat(num2Input);
+            let result = 0;
+
+            // Decision Construct: Switch-Case
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        resultSpan.textContent = "Cannot divide by Zero";
+                        resultSpan.style.color = "red";
+                        return; // Stop execution
+                    }
+                    result = num1 / num2;
+                    break;
+                default:
+                    resultSpan.textContent = "Invalid Operation";
+                    return;
+            }
+
+            // Display the final result
+            resultSpan.style.color = "black";
+            resultSpan.textContent = result;
+        }
+    </script>
+</body>
+</html>
