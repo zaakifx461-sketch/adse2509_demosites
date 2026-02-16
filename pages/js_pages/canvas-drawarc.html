@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADSE2509 Demosite -Home</title>
     <link rel="stylesheet" href="../../css/main.css">
-    
-    <script src="../../js/js-localstorage.js"></script>
+    <script src="../js/js-objects.html"></script>
 </head>
 <body>
     <nav id="main-nav">
@@ -48,7 +47,8 @@
         <li><a href="js_pages/js-selection.html">js selection</a></li>
         <li><a href="js_pages/js-objects.html">js objects</a></li>
         <li><a href="js_pages/js_arrays.html">js Arays</a></li>
-          <li><a href="js_pages/js-calculator.html">Objects</a></li>
+          <li><a href="js_pages/js-calculator.html">Js calculator</a></li>
+           <li><a href="js_pages/js-localstorage-form.html">Local Storage</a></li>
         </ul>
         </li>
     </ul>
@@ -62,29 +62,12 @@
             <a href="#" target="_blank" title="follow us on ">tiktok</a>
             <a href="#" target="_blank" title="follow us onfacebook "> facebook</a>
             <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
- <div class="container">
-        <h2>User Details Form</h2>
-        
-        <form onsubmit="storeDetails(event)">
-            <label for="txtUsername">Username:</label>
-            <input type="text" id="txtUsername" required placeholder="Enter your name">
-
-            <label for="txtEmail">Email:</label>
-            <input type="email" id="txtEmail" required placeholder="Enter your email">
-
-            <div class="btn-group">
-                <button type="submit" class="btn-submit">Submit Details</button>
-                <button type="reset" class="btn-reset">Reset Form</button>
-            </div>
-        </form>
-
-        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ddd;">
-
-        <h2>Stored Information</h2>
-        <div id="contentDiv">Loading...</div>
-
-        <button class="btn-delete" onclick="deleteDetails()">Delete Stored Data</button>
-    </div>
+ 
+         </div>
+    <h1 class="page-heading"> <span class="page-heading-underline"></span>
+    Canvas drawing an Arc</h1>
+    <p>This site illustrates how to draw an arc on an HTML5 Canvas using javascript.</p>
+    <canvas id="my-canvas"></canvas>
     <footer class="page-footer">
   ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
   designed by <a href="#" target="_blank">Zaaki Tech Company</a>
@@ -95,7 +78,7 @@
 </script>
 
 <!-- link to the JS to display hide the navigation menu  --> 
- <script async src="../js/responsive_nav.js"></script>  
+ <script src="../../js/canvas_drawarc.js"></script> 
 
 </body>
 </html>

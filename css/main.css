@@ -371,3 +371,15 @@ form fieldset{
     width: 500px;
     height: 500px;
   }
+
+  /*style the canvas usings its ID attribute*/
+
+  #my-canvas
+  {
+    display: flex;
+    width:55%;
+    height: 55%;
+    border: 3px groove #f00;
+    margin:8px auto;
+    overflow: auto;
+  }

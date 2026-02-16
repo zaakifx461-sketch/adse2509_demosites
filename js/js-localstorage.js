@@ -1,4 +1,4 @@
-//javascript to get and display local storage values 
+/* //javascript to get and display local storage values 
 
 //variables to store local storage details 
 let localStorageDetails = "";
@@ -39,7 +39,9 @@ function printLocalStorage(){
         }
         else 
             localStorageDetails += `<p>The Username and email addresses have been cleared or were not set.</p>`;
-    }
+     contentDiv.innerHTML = localStorageDetails;
+    } 
+   
     else 
         alert("sorry ,you browser doesnt support local storage .\nPlease try a newer version or switch  to a different browser.");
 }
@@ -47,4 +49,62 @@ function printLocalStorage(){
 document.addEventListener("DOMContentLoaded",function(){
     if(document.getElementById('contentDiv'))
         printLocalStorage();
-});
+}); */// Define variable but reset it inside the function to avoid duplication
+   function storeDetails(event) {
+            event.preventDefault(); // Stop page reload
+
+            // 1. Get values
+            const username = document.getElementById('txtUsername').value;
+            const email = document.getElementById('txtEmail').value;
+
+            // 2. Save to Local Storage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+
+            alert("Success! Data saved.");
+
+            // 3. Update the display immediately
+            printLocalStorage();
+        }
+
+        function deleteDetails() {
+            // Remove items from memory
+            localStorage.removeItem('username');
+            localStorage.removeItem('email');
+            
+            alert("Data deleted from storage.");
+            
+            // Refresh display to show it's gone
+            printLocalStorage();
+        }
+
+        function printLocalStorage() {
+            const contentDiv = document.getElementById('contentDiv');
+            let outputHTML = ""; // Create a fresh variable every time
+
+            if (('localStorage' in window) && window['localStorage'] !== null) {
+                
+                // Check if data exists
+                if (localStorage.getItem('username') && localStorage.getItem('email')) {
+                    const username = localStorage.getItem('username');
+                    const useremail = localStorage.getItem('email');
+                    
+                    outputHTML = `
+                        <p>
+                            <strong>User's Name:</strong> ${username}<br>
+                            <strong>Email Address:</strong> ${useremail}
+                        </p>`;
+                } else {
+                    outputHTML = `<p style="color: #777;"><em>No data found in Local Storage.</em></p>`;
+                }
+                
+                contentDiv.innerHTML = outputHTML;
+            } else {
+                alert("Your browser does not support Local Storage.");
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            printLocalStorage();
+        });
