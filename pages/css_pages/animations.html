@@ -5,49 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADSE2509 Demosite -CSS ttran</title>
     <link rel="stylesheet" href="../../css/main.css">
-    <!--internal style sheet that wil be used to illustrate CSS transformation-->
-<style>
-    #css-animation-div{
-        width: 150px;
-        height: 150px;
-        background-color: yellowgreen;
-        position: relative;
-        font-weight: 700;
-        padding: 15;
-        font-size: 20x;
-       /*create animation using the shorthand for animation*/
-       animation: anim_div 5s 2;
-    }
-    /* set up the animation keyframes */
-   
-</style>
+   <!-- Internal/embedded stylesheet that will be used to illustrate CSS transitions -->
+   <style>
+      #css-animation-div
+      {
+         width:150px;
+         height:80px;
+         background-color:#00c89f;
+         position:relative;
+         font-weight:700;
+         padding: 15px;
+         font-size:20px;
+         /* Create the animatio using the shorthand for animation. */
+         animation: anim_div 5s 2;
+      }
+      
+      /* Set up the animation keyframes. */
+      @keyframes anim_div
+      {
+         0%
+         {
+            transform: rotate(0deg);
+            left:0px;
+         }
+         25%
+         {
+            transform: rotate(20deg);
+            left:0px;
+         }
+         50%
+         {
+            transform: rotate(0deg);
+            left:500px;
+         }
+         75%
+         {
+            transform: rotate(0deg);
+            left:0px;
+            background-color:#1ec7e6;
+         }
+         100%
+         {
+            transform: rotate(360deg);
+            left:0px;
+         }
+      }
+      
+      
+      
+      
+   </style>
 </head>
 <body>
-     <nav id="main-nav">
-    <button id="menu-toggle" aria-label="Toggle Menu">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-    
-    <ul id="nav-menu">
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="pages/textformating.html"> Text formating</a>
-        </li>
-        <li>
-            <a href="list.html">lists</a>
-        </li>
-        <li>
-            <a href="link.html">links</a>
-        </li>
-        <li>
-            <a href="images.html">Images</a>
-        </li>
-    </ul>
-    </nav>
+     	
+   <nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+   <ul id="nav-menu">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="textformating.html">Text Formatting</a></li>
+   <li><a href="list.html">Lists</a></li>
+   <li><a href="link.html">Links</a></li>
+   <li><a href="images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="css_pages/transition.html">Transitions</a></li>
+         <li><a href="css_pages/transformation.html">Transformations</a></li>
+         <li><a href="css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="page_layout.html">Page Layouts</a></li>
+   <li><a href="tables.html">Tables</a></li>
+   <li><a href="forms.html">Forms</a></li>
+   <li><a href="multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="js_pages/js-objects.html">JS Objects</a></li>
+	     <li><a href="js_pages/js_arrays.html">JS Arrays</a></li>
+         <li><a href="js_pages/js-calculator.html">JS Calculator</a></li>
+           <li><a href="../pages/js_pages/canvas-drawarc.html">JS Arc</a></li>
+             <li><a href="../pages/js_pages/canvas-drawcircle.html">JS Circle </a></li>
+              <li><a href="../pages/js_pages/canvas-drawline.html">JS Lines</a></li>
+               <li><a href="../pages/js_pages/js-localstorage-form.html">JS js-localstorage-form </a></li>
+              
+      </ul>
+   </li>
+</ul>
+   </nav>
     <div id="container">
         <!-- links to our media handle -->
          <h2 class="social heading">follow us on social media</h2>
@@ -59,9 +108,9 @@
             <a href="#" target="_blank" title="follow us on twiter ">twiter</a>
  
          </div>
-    <h1 class="page-heading"> <span class="page-heading-underline"></span>CSS transformation</h1>
+    <h1 class="page-heading"> <span class="page-heading-underline"></span>CSS Animation </h1>
     <p>A Css animation is the process of changing an element&rsaquo;s property over a given duration of time without the need for Javascript you can change an element&rsaquo;s size ,color location on scren and even trotate it , to name few. To create a css animations you need to set the properties to be animated and keyframes which define  how the animated element will render at a given time  <br></p>
-    <div id="Css animation"></div>
+    <div id="css-animation-div"></div>
     <footer class="page-"footer">
   ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
   designed by <a href="#" target="_blank">Zaaki Tech Company</a>
