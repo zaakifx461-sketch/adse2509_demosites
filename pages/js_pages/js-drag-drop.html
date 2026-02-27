@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSE2509 Demosite -Javascript Drag &amp; Drop</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+        #div1, #div2{
+            border:#00f 2px solid;
+            height:125px;
+            width: 75px;
+            padding: 10px;
+        }
+    </style>
+    <!-- link to the drag and drop javascript file -->
+    <script src="../../js/js_drag_drop.js"></script>
+</head>
+<body>
+    <nav id="main-nav">
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    <ul id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="textformating.html"> Text formating</a>
+        </li>
+        <li>
+            <a href="list.html">lists</a>
+        </li>
+        <li>
+            <a href="link.html">links</a>
+        </li>
+        <li>
+            <a href="images.html">Images</a>
+        </li>
+        <li><a href="images.html">images</a></li>
+        <li><a href="#">CSS</a>
+        <ul>
+        <li><a href="css_pages/transitions.html"></a> transitions</li>
+        <li><a href="css_pages/transformation.html"></a>transformation</li>
+        <li><a href="css_pages/animations.html"></a>animations</li>
+        </ul>
+        </li>
+         <li><a href="tables.html">tables</a></li>
+        <li><a href="forms.html">forms</a></li>
+        <li><a href="multimedia.html">multimedia</a></li>
+         <li><a href="#">JS</a>
+        <ul>
+        <li><a href="js_pages/js-intro.html">Js Intro</a></li>
+        <li><a href="js_pages/js-selection.html">js selection</a></li>
+        <li><a href="js_pages/js-objects.html">js objects</a></li>
+        <li><a href="js_pages/js_arrays.html">js Arays</a></li>
+          <li><a href="js_pages/js-calculator.html">Js calculator</a></li>
+           <li><a href="js_pages/js-localstorage-form.html">Local Storage</a></li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+    <div id="container">
+			<h2 class="social-heading">Follow us on social media</h2>
+		<div class="social-icons mt-4">
+			<a href="https://www.linkedin.com/login" target="_blank" title="Follow us on Linkedin" class="icon-link"><i class="bi bi-linkedin"></i></a>
+			<a href="https://www.youtube.com/" target="_blank" title="Subscribe to our youtube channel" class="icon-link"><i class="bi bi-youtube"></i></a>
+			<a href="https://github.com/" target="_blank" title="Follow us on github" class="icon-link"><i class="bi bi-github"></i></a>
+			<a href="https://x.com/" target="_blank" title="Follow us on x" class="icon-link"><i class="bi bi-twitter-x"></i></a>
+			<a href="https://www.facebook.com/" target="_blank" title="Follow us on facebook" class="icon-link"><i class="bi bi-facebook"></i></a>
+			<a href="https://www.instagram.com/" target="_blank" title="Follow us on instagram" class="icon-link"><i class="bi bi-instagram"></i></a>
+			<a href="" target="_blank" title="View our behance portfolio" class="icon-link"><i class="bi bi-behance"></i></a>
+		</div>
+    <h1 class="page-heading"> <span class="page-heading-underline"></span>Javascript drag and drop Demo</h1>
+    <p>This site illustrates javascript drad and drop functionality</p>
+    <div id="div1">
+        <img src="../../images/beachview.png" alt="HTML5 logo" width="75" height="75" id="image1" draggable="true" ondragstart="drag_image(event)" />
+    </div> <br/> <div id="div2">
+       
+    </div> <br/>
+    <footer class="page-footer">
+  ADSE2509 copyright &copy; 2023 – <span id="currYear"></span>
+  designed by <a href="#" target="_blank">Zaaki Tech Company</a>
+</footer>
+
+<script>
+  document.getElementById("currYear").textContent = new Date().getFullYear();
+</script>
+
+<!-- link to the JS to display hide the navigation menu  --> 
+ <script async src="../js/responsive_nav.js"></script>  
+
+</body>
+</html>
